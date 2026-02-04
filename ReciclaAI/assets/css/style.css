@@ -1,0 +1,783 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Inter:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+:root {
+  --preto: #000000;
+  --pretoc: #111;
+  --branco: #ffffff;
+  --vermelho: #ff0000;
+
+  --azulC: #35D1D7;
+  --azulE: #13458F;
+
+  --verdeE: #0B6B0B;
+  --verdeC: #419841;
+
+  --cinza: #D1D1D1;
+  --cinzac: #f1f1f175;
+  --cinzargba: rgba(168, 168, 168, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--branco);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logotipo {
+  animation: rotate 9s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--cinza);
+  color: var(--preto);
+}
+
+.identidadeVisual {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logotipo,
+.logotipoM {
+  width: 45px;
+}
+
+.logoEscrito a {
+  display: flex;
+  gap: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16pt;
+  color: var(--verdeE);
+}
+
+.colorAzul {
+  color: var(--azulC);
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--preto);
+  font-size: 14pt;
+  margin: 0 40px 0 0 ;
+}
+
+#menu a:hover {
+  border-bottom: 2px solid var(--branco);
+}
+
+#btn-mobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bannerp img {
+  width: 100%;
+  height: 800px;
+  display: block;
+}
+
+.button-bannerp {
+  padding: 10px 20px;
+  background-color: var(--verdeE);
+  color: var(--branco);
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.cont-meio {
+  padding: 40px 20px;
+}
+
+.tituloSecao {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.firstSecao {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card1,
+.card2,
+.card3 {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--branco);
+}
+
+.card1 {
+  background-color: var(--azulE);
+}
+
+.card2 {
+  background-color: var(--verdeC);
+}
+
+.card3 {
+  background-color: var(--verdeE);
+}
+
+.cardImg {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: flex;
+}
+
+.textoCard {
+  max-width: calc(100% - 120px);
+}
+
+.textoCard span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.textoCard p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#conteudo-card {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+}
+
+.cardsP {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.cardP img {
+  height: 445px;
+  object-fit: cover;
+}
+
+.cardP {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoTroca {
+  position: relative;
+  bottom: 95px;
+}
+
+.infoTroca {
+  transition: transform 0.3s ease, color 0.4s ease;
+}
+
+.cardP:hover .infoTroca {
+  transform: translateY(10px);
+  color: white;
+}
+
+.card {
+  width: 300px;
+  border-radius: 15px 15px 0px 0px;
+  color: var(--branco);
+  overflow: hidden;
+  font-weight: 700;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--verdeE);
+  box-shadow: var(--preto) 2px 1px 1px 1px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h5 {
+  padding: 10px;
+  text-align: center;
+}
+
+.identidadeVisual h1 a {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+
+.logotipo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.logotipoM {
+  position: absolute;
+  width: 40px;
+  top: 28px;
+  left: 21px;
+  z-index: 2;
+}
+
+footer {
+  background-color: var(--cinza);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.redes-sociais {
+  margin: 15px 0;
+}
+
+.assinatura {
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+body {
+  background: var(--branco);
+  color: var(--pretoc);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+#conteudo-meio-sn {
+  width: 100%;
+  position: relative;
+}
+
+.contMeio {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1090px;
+}
+
+/* folhas decorativas */
+.Folhasdecoracao {
+  position: absolute;
+  left: 0;
+  top: 310px;
+  width: 0px;
+  z-index: 1;
+}
+
+.Folhasdecoracao2 {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+/* ===== SEÇÃO PADRÃO ===== */
+.wtRecicla {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.wtRecicla p {
+  max-width: 900px;
+  margin: 20px auto 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===== TÍTULO "O QUE É A RECICLA AI" ===== */
+.tituloSB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tituloSB span {
+  font-size: 26px;
+}
+
+.logoEscrito {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.logoE {
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.colorAzul {
+  color: var(--azulC);
+  font-weight: 800;
+  font-size: 26px;
+}
+
+/* ===== SOBRE A PLATAFORMA (VERDE) ===== */
+.aboutPlataforma {
+  background: var(--verdeE);
+  text-align: justify;
+  color: var(--branco);
+  padding: 80px 30px;
+  clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
+}
+
+.aboutPlataforma span {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.aboutPlataforma p {
+  color: var(--branco);
+}
+
+/* ===== MISSÃO E VALORES ===== */
+.wtRecicla img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.wtRecicla span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.wtRecicla>div {
+  margin-bottom: 40px;
+}
+
+/* ===== TECNOLOGIA (AZUL) ===== */
+.aboutTec {
+  background: var(--azulC);
+  padding: 90px 30px;
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+}
+
+.aboutTec span {
+  font-size: 32px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.aboutTec p {
+  color: var(--preto);
+  font-size: 18px;
+}
+
+#fim {
+  background: var(--cinza);
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+.assinatura {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 50px;
+  border-radius: 0 0 40px 40px;
+  color: var(--branco);
+  background-color: var(--verdeE);
+}
+
+.hero-text {
+  max-width: 40%;
+}
+
+.hero-text h1 {
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  line-height: 1.6;
+}
+
+.hero-cta {
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.hero-cta button {
+  font-family: 'Montserrat' sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 14px 30px;
+}
+
+.cfn:hover {
+  background-color: var(--verdeE);
+  border-color: var(--branco);
+  color: var(--branco);
+  transition: 1.5s;
+
+}
+
+.how-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how {
+  padding: 80px 40px;
+  text-align: center;
+  width: 40%;
+  height: auto;
+}
+
+.how h2 {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.cards .card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.cardsP .cardP:hover {
+  transform: translateY(-6px);
+}
+
+.infoTroca {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16pt;
+  position: relative;
+  bottom: 95px;
+  color: var(--branco);
+  font-weight: 700;
+}
+
+.cards .card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.cards .card span {
+  display: block;
+  padding: 15px 15px 0;
+}
+
+.cards .card p {
+  padding: 10px 15px 20px;
+  line-height: 1.4;
+}
+
+
+
+.download {
+  padding: 50px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.download p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.stores img {
+  width: 250px;
+  transition: transform 0.3s;
+  height: auto;
+}
+
+.stores img:hover {
+  transform: scale(1.08);
+}
+
+
+@media (max-width: 699px) {
+
+  #btn-mobile {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 105px;
+    right: 0;
+    background: var(--branco);
+    color: var(--preto);
+    font-weight: bold;
+    z-index: 1000;
+    height: 10px;
+    transition: .5s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 62%);
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    border-bottom: solid 1px var(--preto);
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    border-bottom: solid 1px var(--preto);
+  }
+
+  #btn-mobile {
+    position: absolute;
+    right: 0;
+    top: 42px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: end;
+    border-radius: 4px;
+    background-color: var(--branco);
+    color: var(--preto);
+    padding: 7px;
+    border: solid 2px var(--branco);
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #btn-mobile:hover {
+    border-color: var(--preto);
+    transition: border-color 1s;
+  }
+
+}
+
+@media (max-width: 768px) {
+    .bannerp img {
+      height: 350px;
+      width: 100%;
+    }
+  #menu {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 108px;
+    right: 0;
+    background: var(--verdeE);
+    color: var(--branco);
+    font-weight: bold;
+    z-index: 1000;
+    height: 10px;
+    transition: .5s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    display: flex;
+  }
+
+  #menu a {
+    color: var(--branco);
+    padding: 15px;
+    border-bottom: 1px solid var(--branco);
+  }
+
+  #btn-mobile {
+    display: block;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textoCard {
+    max-width: 100%;
+  }
+
+  .cardImg {
+    width: 80px;
+  }
+
+  .cardImg img {
+    width: 150px;
+  }
+
+  .stores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    gap: 10px;
+  }
+
+
+  @media (min-width: 1625px) {
+      .bannerp img {
+      height: 100px;
+      width: 100%;
+    }
+    #conteudo-card img {
+      object-fit: contain;
+      object-fit: cover;
+    }
+
+    .cont-meio {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1450px;
+    }
+
+    .bannersn img {
+      height: 700px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .wtRecicla p {
+      font-size: 16px;
+    }
+
+    .aboutPlataforma span,
+    .aboutTec span {
+      font-size: 24px;
+    }
+
+    .Folhasdecoracao {
+      display: none;
+    }
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .cardImg img {
+    width: 150px;
+  }
+
+
+}
